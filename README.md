@@ -1,8 +1,11 @@
-<p align="right">
-<a href="https://discord.gg/KnJGY9S">
-  <img src="https://github.com/fenix-hub/ColoredBadges/blob/master/svg/social/discord.svg" alt="react" style="vertical-align:top; margin:6px 4px">
-</a>
-</p>
+This is my first game created on the game engine - Godot Engine!
+
+So, What should be done in it? - Overcome the largest number of waves.
+On every wave of you, asteroids will fly to your planet. Your task as a shield is to prevent asteroids from hitting the Earth.
+To control your shield, use W or S buttons.
+
+## Good luck!
+
 
 This plugin is now supported in [Godot Extended Library Discord](https://discord.gg/JNrcucg), check out the [Godot Extended Library Project](https://github.com/godot-extended-libraries)!
 
