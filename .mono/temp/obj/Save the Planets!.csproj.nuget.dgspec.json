@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/anton/Документы/Godot Projects/Save the Planets!/Save the Planets!.csproj": {}
+  },
+  "projects": {
+    "/home/anton/Документы/Godot Projects/Save the Planets!/Save the Planets!.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/anton/Документы/Godot Projects/Save the Planets!/Save the Planets!.csproj",
+        "projectName": "Save the Planets!",
+        "projectPath": "/home/anton/Документы/Godot Projects/Save the Planets!/Save the Planets!.csproj",
+        "packagesPath": "/home/anton/.nuget/packages/",
+        "outputPath": "/home/anton/Документы/Godot Projects/Save the Planets!/.mono/temp/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/home/anton/.local/share/godot/mono/GodotNuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/anton/.nuget/NuGet/NuGet.Config",
+          "/home/anton/.nuget/NuGet/config/Godot.Offline.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.2, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

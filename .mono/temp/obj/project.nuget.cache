@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "L5SvFjEq7ToUbxJSpeqTWt3RTOjK09yQqtqf71c6oTp/PaBui7k8ta7V+DeD/o+GGq04y/hvHdd/JkBjF/vkkg==",
+  "success": true,
+  "projectFilePath": "/home/anton/Документы/Godot Projects/Save the Planets!/Save the Planets!.csproj",
+  "expectedPackageFiles": [
+    "/home/anton/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.2/microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "/home/anton/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.2/microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

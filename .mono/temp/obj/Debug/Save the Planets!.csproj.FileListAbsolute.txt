@@ -1,0 +1,9 @@
+/home/anton/Документы/Godot Projects/Save the Planets!/.mono/temp/bin/Debug/Save the Planets!.dll
+/home/anton/Документы/Godot Projects/Save the Planets!/.mono/temp/bin/Debug/Save the Planets!.pdb
+/home/anton/Документы/Godot Projects/Save the Planets!/.mono/temp/obj/Debug/Save the Planets!.csproj.AssemblyReference.cache
+/home/anton/Документы/Godot Projects/Save the Planets!/.mono/temp/obj/Debug/Save the Planets!.GeneratedMSBuildEditorConfig.editorconfig
+/home/anton/Документы/Godot Projects/Save the Planets!/.mono/temp/obj/Debug/Save the Planets!.AssemblyInfoInputs.cache
+/home/anton/Документы/Godot Projects/Save the Planets!/.mono/temp/obj/Debug/Save the Planets!.AssemblyInfo.cs
+/home/anton/Документы/Godot Projects/Save the Planets!/.mono/temp/obj/Debug/Save the Planets!.csproj.CoreCompileInputs.cache
+/home/anton/Документы/Godot Projects/Save the Planets!/.mono/temp/obj/Debug/Save the Planets!.dll
+/home/anton/Документы/Godot Projects/Save the Planets!/.mono/temp/obj/Debug/Save the Planets!.pdb
