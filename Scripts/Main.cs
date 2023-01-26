@@ -15,6 +15,7 @@ public class Main : Node
     {
         //System configured
         GD.Randomize();
+        dt.Initialize();
         dt.LoadData();
 
         //Game activities

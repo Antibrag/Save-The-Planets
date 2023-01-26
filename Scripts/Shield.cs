@@ -8,7 +8,11 @@ public class Shield : Node2D
 
     public override void _Ready()
     {
+        Vector2 sizeScreen = GetViewportRect().Size;
+        Position = sizeScreen / 2;
+
         GetNode<Sprite>("Shield/ShieldSprite").FlipH = true;
+
         base._Ready();
     }
 
