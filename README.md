@@ -1,8 +1,23 @@
-## Hello everybody
-
+## Hello everybody!
 Your goal in this game is - to act as a shield, a planet from the owners of meteorites flying in it.
+
 You need to move with the buttons: W, S or Up and Down buttons.
 
+## How download game?
+- Step 1: Find tab "Release" on this page.
+ <img src="Release.png" align="centre" width="391" height="91">
+ 
+- Step 2: Click to "2 tags".
+- Step 3: In opened page, select your os.
+- Step 4: Download a .zip file
+<img src="ZipSpace.png" align="centre" width="257" height="167">
+
+- Step 5: Unpack the downloaded .zip file
+- Step 6: Start the .exe file
+
+Good game!
+
+--------------------------------------------------------------------------------------------------
 
 This plugin is now supported in [Godot Extended Library Discord](https://discord.gg/JNrcucg), check out the [Godot Extended Library Project](https://github.com/godot-extended-libraries)!
 
@@ -41,14 +56,3 @@ If you want to see some screenshots you can find them here `addons/github-integr
     <th><img src='https://avatars0.githubusercontent.com/u/48778172?s=64&v=4' alt='@auctru' width="64"/><br/><a href="https://github.com/autcru">autcru</a></th> 
   </tr>
 </table>
-
-## :warning: Disclaimer  
-As a "work in progress" project, there is *no warranty* for any eventual issue and bug that may broke your project.  
-I don't assume any responsibility for possible corruptions of your project. It is always advisable to keep a copy of your project and check any changes you make in your Github repository.  
-
------------------
-> This text file was created via [TextEditor Integration](https://github.com/fenix-hub/godot-engine.text-editor) inside Godot Engine's Editor.
-
-
-
-
