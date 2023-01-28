@@ -1,10 +1,22 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Planet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Shield.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/Main.cs" type="Script" id=4]
 [ext_resource path="res://Scenes/Danger.tscn" type="PackedScene" id=5]
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_box_extents = Vector3( 150, 100, 1 )
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
 
 [sub_resource type="Curve2D" id=2]
 _data = {
@@ -16,16 +28,35 @@ script = ExtResource( 4 )
 DanScene = ExtResource( 5 )
 dangerSpeed = 400.0
 
+[node name="Backgound" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Stars" type="Particles2D" parent="Backgound"]
+modulate = Color( 1, 1, 1, 0.545098 )
+position = Vector2( 512, 320 )
+scale = Vector2( 5, 5 )
+amount = 500
+lifetime = 20.0
+preprocess = 20.0
+speed_scale = 0.1
+explosiveness = 0.1
+randomness = 1.0
+process_material = SubResource( 3 )
+
 [node name="HUD" parent="." instance=ExtResource( 3 )]
+light_mask = 2
 
 [node name="Axis" parent="." instance=ExtResource( 2 )]
-position = Vector2( 512, 384 )
-rotationForce = 200.0
+position = Vector2( 512, 320 )
+rotationForce = 275.0
 
 [node name="Planet" parent="." instance=ExtResource( 1 )]
-position = Vector2( 512, 384 )
+position = Vector2( 512, 320 )
 
 [node name="SpawnDanger" type="Path2D" parent="."]
+position = Vector2( 3.05176e-05, -64 )
 curve = SubResource( 2 )
 
 [node name="Spawner" type="PathFollow2D" parent="SpawnDanger"]
@@ -40,7 +71,7 @@ wait_time = 10.0
 one_shot = true
 
 [node name="BetweenWawesTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.0
 one_shot = true
 
 [connection signal="body_entered" from="Planet" to="." method="OnPlanetBodyEntered"]

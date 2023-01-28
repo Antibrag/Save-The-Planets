@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/Planet.cs" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 16.0012
+radius = 14.6014
 
 [node name="Planet" type="Area2D"]
 scale = Vector2( 5, 5 )

@@ -8,19 +8,17 @@ public class Planet : Area2D
 
     RandomNumberGenerator rnd = new RandomNumberGenerator();
 
-    public override void _Ready()
+    public void ResizePlanet()
     {
         Vector2 sizeScreen = GetViewportRect().Size;
         Position = sizeScreen / 2;
-        GD.Print(Position);
-
-        base._Ready();
     }
 
     public override void _Process(float delta)
     {
         GetNode<Sprite>("PlanetSprite").RotationDegrees += planetRotationSpeed * delta;
         base._Process(delta);
+        ResizePlanet();
     }
 
     public void GeneratePlanet()

@@ -1,5 +1,4 @@
 using Godot;
-using Godot.Collections;
 using System;
 
 public class Main : Node
@@ -25,9 +24,9 @@ public class Main : Node
 
     public override void _Process(float delta)
     {
-        GetNode<HUD>("/root/Main/HUD").ShowGameStats(Data.money, Data.wawe,
-        (float)Math.Round(GetNode<Timer>("/root/Main/WawesTimer").TimeLeft, 1),
-        (float)Math.Round(GetNode<Timer>("/root/Main/BetweenWawesTimer").TimeLeft, 1));
+        GetNode<HUD>("HUD").ShowGameStats(Data.money, Data.wawe,
+        (float)Math.Round(GetNode<Timer>("WawesTimer").TimeLeft, 1),
+        (float)Math.Round(GetNode<Timer>("BetweenWawesTimer").TimeLeft, 1));
         base._Process(delta);
     }
 
@@ -37,27 +36,27 @@ public class Main : Node
         GetNode<Timer>("DangerSpawnTimer").Stop();
         GetNode<Timer>("BetweenWawesTimer").Start();
         GetNode<Label>("HUD/BetweenWaweTimerLabel").Show();
-        GetNode<HUD>("HUD").ShowMessage("Волна закончилась!", 1.5f, GetNode<Label>("HUD/MessageLabel"));
+        GetNode<HUD>("HUD").ShowMessage("Волна закончилась!", 1, GetNode<Label>("HUD/MessageLabel"));
         Data.wawe++;
 
         dt.SaveData();
     }
 
-    public void OnPlanetBodyEntered(PhysicsBody2D body)
+    public void OnPlanetBodyEntered(Danger body)
     {
-        body.QueueFree();
+        body.Destroy();
         GetNode<Timer>("DangerSpawnTimer").Stop();
         GetNode<Timer>("WawesTimer").Stop();
         GetNode<Timer>("BetweenWawesTimer").Start();
         GetNode<Label>("HUD/BetweenWaweTimerLabel").Show();
-        GetNode<HUD>("HUD").ShowMessage("Поражение!", 1.5f, GetNode<Label>("HUD/MessageLabel"));
+        GetNode<HUD>("HUD").ShowMessage("Поражение!", 1, GetNode<Label>("HUD/MessageLabel"));
         dt.SaveData();
     }
 
     public void OnBetweenWawesTimerTimeout()
     {
         GetNode<Timer>("WawesTimer").WaitTime = 10 + (Data.wawe * KF_GANG);
-        GetNode<HUD>("HUD").ShowMessage("Волна началась!", 1.5f, GetNode<Label>("HUD/MessageLabel"));
+        GetNode<HUD>("HUD").ShowMessage("Волна началась!", 1, GetNode<Label>("HUD/MessageLabel"));
         GetNode<Timer>("WawesTimer").Start();
         GetNode<Timer>("DangerSpawnTimer").Start();
         GetNode<Label>("HUD/BetweenWaweTimerLabel").Hide();
@@ -77,6 +76,7 @@ public class Main : Node
 
         dang.LookAt(GetNode<Area2D>("Planet").Position);
         dang.LinearVelocity = new Vector2(dangerSpeed + (Data.wawe * KF_GANG), 0).Rotated(dang.Rotation);
+        dang.ShowDanger();
     }
 
 }

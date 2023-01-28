@@ -7,13 +7,15 @@
 extents = Vector2( 40, 40 )
 
 [sub_resource type="ParticlesMaterial" id=2]
+lifetime_randomness = 0.5
 flag_disable_z = true
 spread = 180.0
-gravity = Vector3( 0, 0, 0 )
+gravity = Vector3( 0, 9.8, 0 )
 initial_velocity = 50.0
 initial_velocity_random = 1.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
+color = Color( 0.368627, 0.227451, 0.180392, 1 )
 
 [node name="Danger" type="RigidBody2D"]
 gravity_scale = 0.0
@@ -26,18 +28,32 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 32, 0, 32, 32 )
+__meta__ = {
+"_aseprite_wizard_config_": {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"op_exp": false,
+"player": "",
+"source": ""
+}
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collusion" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 3 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 position = Vector2( 0, 0.2625 )
 scale = Vector2( 1e-05, 0.02625 )
 
-[node name="Particles2D" type="Particles2D" parent="."]
+[node name="DestroyingEffect" type="Particles2D" parent="."]
 scale = Vector2( 3, 3 )
 emitting = false
 amount = 100
+lifetime = 1.5
 one_shot = true
 speed_scale = 2.0
 explosiveness = 1.0
