@@ -58,7 +58,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg", "res://addons/github-integration/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/github-integration/plugin.cfg" )
 
 [gui]
 
